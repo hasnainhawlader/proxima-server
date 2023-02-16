@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+const cors = require("cors");
 
 const projectRoutes = require("./routes/projectRoute");
 
@@ -12,9 +13,9 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-//middleware
+//middleware\
+app.use(cors());
 app.use(express.json());
-
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
