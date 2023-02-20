@@ -30,11 +30,38 @@ const getSingleProject = async (req, res) => {
 // post a new project
 
 const postProject = async (req, res) => {
-  const data = req.body;
+  const { title, tech, budget, duration, menager, dev } = req.body;
+
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push("title");
+  }
+  if (!tech) {
+    emptyFields.push("tech");
+  }
+  if (!budget) {
+    emptyFields.push("budget");
+  }
+  if (!duration) {
+    emptyFields.push("duration");
+  }
+  if (!menager) {
+    emptyFields.push("menager");
+  }
+  if (!dev) {
+    emptyFields.push("dev");
+  }
+
+  if (emptyFields.length > 0) {
+    return res
+      .status(400)
+      .json({ error: "please fill all fildes", emptyFields });
+  }
 
   try {
     const project = await Project.create({
-      ...data,
+      ...req.body,
     });
     res.status(200).json(project);
   } catch (err) {
