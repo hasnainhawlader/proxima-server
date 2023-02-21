@@ -18,7 +18,7 @@ const projectSchema = new Schema(
       type: Number,
       required: true,
     },
-    menager: {
+    manager: {
       type: String,
       required: true,
     },

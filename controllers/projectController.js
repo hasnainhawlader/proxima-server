@@ -30,7 +30,7 @@ const getSingleProject = async (req, res) => {
 // post a new project
 
 const postProject = async (req, res) => {
-  const { title, tech, budget, duration, menager, dev } = req.body;
+  const { title, tech, budget, duration, manager, dev } = req.body;
 
   let emptyFields = [];
 
@@ -46,8 +46,8 @@ const postProject = async (req, res) => {
   if (!duration) {
     emptyFields.push("duration");
   }
-  if (!menager) {
-    emptyFields.push("menager");
+  if (!manager) {
+    emptyFields.push("manager");
   }
   if (!dev) {
     emptyFields.push("dev");
