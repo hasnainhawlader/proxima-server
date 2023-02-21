@@ -37,18 +37,23 @@ const postProject = async (req, res) => {
   if (!title) {
     emptyFields.push("title");
   }
+
   if (!tech) {
     emptyFields.push("tech");
   }
+
   if (!budget) {
     emptyFields.push("budget");
   }
+
   if (!duration) {
     emptyFields.push("duration");
   }
+
   if (!manager) {
     emptyFields.push("manager");
   }
+
   if (!dev) {
     emptyFields.push("dev");
   }
@@ -56,7 +61,7 @@ const postProject = async (req, res) => {
   if (emptyFields.length > 0) {
     return res
       .status(400)
-      .json({ error: "please fill all fildes", emptyFields });
+      .json({ error: "Please fill in all fields", emptyFields });
   }
 
   try {
