@@ -22,9 +22,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// routes
+// routes all porject post get ...
 
 app.use("/api/projects", projectRoutes);
+
+// routes for loging
 
 app.use("/api/user", userRoute);
 
