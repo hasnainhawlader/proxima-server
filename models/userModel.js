@@ -14,7 +14,7 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.statics.login = async function (email, password) {
+userSchema.statics.signup = async function (email, password) {
   const exist = await this.findOne({ email });
   if (exist) {
     throw Error("Email already used");
