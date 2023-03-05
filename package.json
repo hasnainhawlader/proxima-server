@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,5 +18,14 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
     "validator": "^13.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasnainhawlader/proxima-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hasnainhawlader/proxima-server/issues"
+  },
+  "homepage": "https://github.com/hasnainhawlader/proxima-server#readme",
+  "description": ""
 }
